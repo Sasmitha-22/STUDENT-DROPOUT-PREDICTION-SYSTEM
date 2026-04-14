@@ -13,7 +13,6 @@ based on academic performance and socio-economic factors.
 <img width="309" height="343" alt="image" src="https://github.com/user-attachments/assets/0cff4ee2-7420-46c5-bab7-c02af2ecfd2f" />
 
 
-
 ## 📊 Dataset Details
 
 - Source: Kaggle  
