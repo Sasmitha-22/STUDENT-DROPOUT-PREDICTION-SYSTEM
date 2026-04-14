@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dropout Prediction</title>
+
+    <style>
+        body {
+            background-color: #f5f5dc; /* Beige */
+            font-family: Arial, sans-serif;
+            color: black;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #ffffff;
+            width: 400px;
+            margin: 50px auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h1 {
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>STUDENT DROPOUT PREDICTION</h1>
+
+        <form action="/predict" method="post">
+
+            <input type="number" name="age" placeholder="Age at Enrollment" required>
+
+            <select name="gender">
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select>
+
+            <input type="number" step="any" name="sem1" placeholder="1st Semester Grade" required>
+
+            <input type="number" step="any" name="sem2" placeholder="2nd Semester Grade" required>
+
+            <select name="fees">
+                <option value="1">Fees Paid</option>
+                <option value="0">Fees Not Paid</option>
+            </select>
+
+            <input type="number" step="any" name="prev" placeholder="Previous Qualification Grade" required>
+
+            <button type="submit">Predict</button>
+
+        </form>
+
+        {% if prediction %}
+            <div class="result">
+                Prediction: {{ prediction }}
+            </div>
+            <div>
+                {{ recommendation }}
+            </div>
+        {% endif %}
+
+    </div>
+
+</body>
+</html>
