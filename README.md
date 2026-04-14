@@ -111,3 +111,35 @@ The final model is deployed using:
 
 •	Yashwanth R – 24BIT133
 
+## 🚀 Steps to run
+
+### ✅ Prerequisites
+Make sure you have the following installed on your computer:
+- Python (version 3.x)
+- Git
+
+---
+
+### 📥 Step 1: Clone the Repository
+Open Command Prompt and run:
+git clone https://github.com/Sasmitha-22/STUDENT-DROPOUT-PREDICTION-SYSTEM.git
+
+### 📂 Step 2: Go Into the Project Folder
+cd STUDENT-DROPOUT-PREDICTION-SYSTEM
+
+### 📦 Step 3: Install Required Libraries
+pip install -r requirements.txt
+
+### ▶️ Step 4: Run the Application
+python app.py
+
+### 🌐 Step 5: Open in Browser
+http://127.0.0.1:5000
+
+---
+
+## 📊 Prediction Output
+- 🔴 **Dropout** - High risk of dropping out
+- 🟡 **Enrolled** - Currently enrolled, monitor performance
+- 🟢 **Graduate** - Likely to graduate successfully
+
